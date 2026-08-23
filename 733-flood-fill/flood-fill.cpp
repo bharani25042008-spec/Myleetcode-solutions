@@ -7,7 +7,7 @@ public:
           vector<vector<int>>vis(m,vector<int>(n,0));
           vis[sr][sc]=1;
           int src=image[sr][sc];
-          image[sr][sc] = color;
+          image[sr][sc]=color;
           q.push({sr,sc});
           int dr[]={-1,1,0,0};
           int dc[]={0,0,-1,1};
@@ -23,12 +23,11 @@ public:
                  if(vis[nr][nc]==1){
                     continue;
                  }
-                 if(image[nr][nc]!=src){
-                   continue;
-                 }
+                 if(image[nr][nc]==src){
                     vis[nr][nc]=1;
                     image[nr][nc]=color;
                     q.push({nr,nc});
+                 }
              }
           }
           return image;
