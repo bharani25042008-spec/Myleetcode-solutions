@@ -1,30 +1,32 @@
 class Solution {
 public:
-bool func(string s,int k){
-      int c=count(s.begin(),s.end(),'1');
-      return c==k;
-}
     string shortestBeautifulSubstring(string s, int k) {
-          vector<string>ans;
-          vector<string>res;
-          for(int i=0;i<s.length();i++){
-            string temp="";
-            for(int j=i;j<s.length();j++){
-                 temp+=s[j];
-                 ans.push_back(temp);
+            int l=0;
+            int c=0;
+            vector<string>ans;
+            for(int i=0;i<s.length();i++){
+                 if(s[i]=='1'){
+                     c++;
+                 }
+                 while(c>k){
+                     if(s[l]=='1'){
+                         c--;
+                     }
+                     l++;
+                 }
+                 if(c==k){
+                    while(s[l]=='0'){
+                        l++;
+                    }
+                     ans.push_back(s.substr(l,i-l+1));
+                 }
             }
-          }
-          for(auto it:ans){
-              if(func(it,k)){
-                 res.push_back(it);
-              }
-          }
-          sort(res.begin(),res.end(),[&](string a,string b){
-              if(a.length()==b.length())
-                   return a<b;
-                return a.length()<b.length();
-    });
-          if(res.empty()) return "";
-          return res.front();
+            sort(ans.begin(),ans.end(),[&](string a,string b){
+                  if(a.length()==b.length())
+                      return a<b;
+                   return a.length()<b.length();
+            });
+          if(ans.empty()) return "";
+          return ans.front();
     }
 };
