@@ -40,7 +40,7 @@ bool func(int t,vector<vector<pair<int,int>>>&adj,int s,int tar,int k,int n){
           for(int i=0;i<edges.size();i++){
                r=max(r,edges[i][0]);
                r=max(r,edges[i][1]);
-               r=max(r,edges[i][2]);
+               r=max(r,edges[i][2]);             
           }
           while(l<=r){
               int mid=(l+r)/2;
