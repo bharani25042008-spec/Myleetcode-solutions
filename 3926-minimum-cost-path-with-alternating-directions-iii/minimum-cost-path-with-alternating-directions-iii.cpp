@@ -16,9 +16,7 @@ public:
             int np = (p + 1) % 2;
             long long waitCost = d + penalty[r][c];
             if (waitCost < dist[r][c][np]) {
-
                 dist[r][c][np] = waitCost;
-
                 q.push({
                     waitCost,
                     r,
@@ -55,3 +53,4 @@ public:
     return 0;
     }
 };
+//wait cost  mattum ennala kandu pudika mudila just wait cost na same cell laiyae nikkanum but how that cost induces the shortest distance it is the major question?--ok okay qns laiyae koduthutaanunga
