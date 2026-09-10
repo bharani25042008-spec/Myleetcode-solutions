@@ -2,6 +2,7 @@ class Solution {
 public:
 long  long dp[17][2][2][100][100];
 // shit i forgot to add the cnt in the base case 
+//digit dp is easy
 int c1(int idx,int n){
      if(idx%2==0){
           return n;
