@@ -12,13 +12,13 @@ public:
          for(int i=n-2;i>=0;i--){
               suff[i]=suff[i+1]+nums[i+1];
          }
-         for(auto it:pref){
-             cout<<it<<' ';
-         }
-         cout<<endl;
-         for(auto it:suff){
-             cout<<it<<' ';
-         }
+        //  for(auto it:pref){
+        //      cout<<it<<' ';
+        //  }
+        //  cout<<endl;
+        //  for(auto it:suff){
+        //      cout<<it<<' ';
+        //  }
          vector<int>ans(n);
          for(int i=0;i<n;i++){
               ans[i]=abs(pref[i]-suff[i]);
