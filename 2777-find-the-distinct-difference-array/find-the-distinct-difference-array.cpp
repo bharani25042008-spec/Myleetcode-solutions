@@ -27,7 +27,7 @@ public:
                 }
                 ans[i]=val1-val2;
             }
-            for(auto it:ans) cout<<it<<' ';
+            //for(auto it:ans) cout<<it<<' ';
             return ans;
     }
 };
