@@ -16,6 +16,7 @@ __int128 func(int node,vector<vector<int>>&adj,vector<int>&b,map<int,__int128>&m
                 mini=min(mini,val);
                }  
       return mp[node]=(maxi+((maxi-mini)+(__int128)b[node]));
+      //tree dp duh
 }
     long long finishTime(int n, vector<vector<int>>& edges, vector<int>& baseTime) {
           vector<vector<int>>adj(n);
