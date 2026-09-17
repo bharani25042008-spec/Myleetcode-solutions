@@ -14,7 +14,7 @@ int func(int i,int prev,vector<int>&nums,vector<vector<int>>&dp){
       return dp[i][prev+1]=max(nottake,take);
 }
     int lengthOfLIS(vector<int>& nums) {
-        vector<vector<int>>dp(nums.size(),vector<int>(3000,-1));
+        vector<vector<int>>dp(nums.size(),vector<int>(2500,-1));
         return func(0,-1,nums,dp);
     }
 };
