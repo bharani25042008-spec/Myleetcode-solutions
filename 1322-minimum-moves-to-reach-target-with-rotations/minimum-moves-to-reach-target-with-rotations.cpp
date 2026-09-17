@@ -18,12 +18,22 @@ public:
                     vis[r1][c1+1][dir]=1;
                      q.push({d+1,r1,c1+1,r2,c2+1,dir});
                  }
+               // right side movement like ss.. to .ss.
             }
             if(r1+1<n&&grid[r1+1][c1]==0&&r2+1<n&&grid[r2+1][c2]==0){
                 if(vis[r1+1][c1][dir]==0){
                 vis[r1+1][c1][dir]=1;
                 q.push({d+1,r1+1,c1,r2+1,c2,dir});
                 }
+                //  down side movement like s
+                //                          s
+                //                          .
+                //                          .
+                //                         to
+                //                         .
+                //                         s
+                //                         s
+                //                         .
             }
             if(dir==0){
                 if(r1+1<n&&grid[r1+1][c1]==0&&r2+1<n&&grid[r2+1][c2]==0){
@@ -32,6 +42,8 @@ public:
                     q.push({d+1,r1,c1,r1+1,c1,1});
                     }
                 }
+                // horizontal rot
+                // image ref imp i missed the two cells checking
             }
             if(dir==1){
               if(c1+1<n&&grid[r1][c1+1]==0&&c2+1<n&&grid[r2][c2+1]==0){
