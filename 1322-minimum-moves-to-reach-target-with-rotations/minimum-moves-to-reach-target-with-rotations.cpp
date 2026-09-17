@@ -43,7 +43,7 @@ public:
                     }
                 }
                 // horizontal rot
-                // image ref imp i missed the two cells checking
+                // image ref imp i missed the two cells checking,      just move the head like only the first cells in case of a rotation because head only moves tail may move but head only has the rights to visit a cell it's called snake bfs
             }
             if(dir==1){
               if(c1+1<n&&grid[r1][c1+1]==0&&c2+1<n&&grid[r2][c2+1]==0){
@@ -54,6 +54,7 @@ public:
               }
         }
         }
+
         return -1;
     }
 };
