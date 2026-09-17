@@ -1,1 +1,1 @@
-<h2>minimum-moves-to-reach-target-with-rotations Notes</h2><hr>[ Time taken: 1hr 42m 1s ]
+<h2>minimum-moves-to-reach-target-with-rotations Notes</h2><hr>[ Time taken: 10m 24s ]
