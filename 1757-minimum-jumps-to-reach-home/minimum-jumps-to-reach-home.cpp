@@ -8,14 +8,14 @@ public:
         //   n=max(n,x);
           set<int>st(forbidden.begin(),forbidden.end());
           q.push({0,0,2});
-          vector<vector<int>>vis(7000,vector<int>(3,0));
+          vector<vector<int>>vis(6000,vector<int>(3,0));
           vis[0][2]=1;
           while(!q.empty()){
               auto[d,node,dir]=q.front();
               q.pop();
               if(node==x) return d;
               if(dir==2){
-                  if(node+a<7000){
+                  if(node+a<6000){
                       if(vis[node+a][1]==0&&st.find(node+a)==st.end()){
                          vis[node+a][1]=1;
                          q.push({d+1,node+a,1});
@@ -36,7 +36,7 @@ public:
                      }
                   }
               }
-              if(node+a<7000){
+              if(node+a<6000){
                  if(vis[node+a][1]==0&&st.find(node+a)==st.end()){
                      vis[node+a][1]=1;
                      q.push({d+1,node+a,1});
