@@ -1,1 +1,1 @@
-<h2>minimum-jumps-to-reach-home Notes</h2><hr>[ Time taken: 3hrs 33m 19s ]
+<h2>minimum-jumps-to-reach-home Notes</h2><hr>[ Time taken: 3hrs 33m 17s ]
