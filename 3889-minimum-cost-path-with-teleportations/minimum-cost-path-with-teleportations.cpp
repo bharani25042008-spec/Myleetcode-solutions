@@ -69,17 +69,12 @@ public:
           int n=grid[0].size();
           priority_queue<tuple<int,int,int,int>,vector<tuple<int,int,int,int>>,greater<tuple<int,int,int,int>>>q;
           vector<vector<vector<int>>>dist(m,vector<vector<int>>(n,vector<int>(k+1,INT_MAX)));
-          
-          // CHANGE 1: Changed map to a vector array for speed, and ONLY store exact values 
-          // to fix the O(N^4) Memory/Time Limit Exceeded.
           vector<vector<pair<int,int>>> mp(10005);
           for(int i=0;i<m;i++){
             for(int j=0;j<n;j++){
                 mp[grid[i][j]].push_back({i,j}); 
             }
           }
-          
-          // CHANGE 2: Added a cache to prevent TLE during teleportation
           vector<int> max_val(k + 1, -1);
           
           dist[0][0][k]=0;
@@ -88,10 +83,7 @@ public:
           while(!q.empty()){
               auto[d,r,c,rem]=q.top();
               q.pop();
-              
-              // CHANGE 3: Skip stale nodes (Standard Dijkstra TLE prevention)
               if(d > dist[r][c][rem]) continue;
-              
               if(r==m-1&&c==n-1){
                   return d;
               }
@@ -113,11 +105,7 @@ public:
                          q.push({nd,n_r,n_c,rem});
                     }
               }
-              
-              // CHANGE 4: Fixed typo (rem-1 instead of r-1)
               int newrem = rem - 1; 
-              
-              // CHANGE 5: Iterate teleport targets efficiently using the cache 
               if(newrem >= 0 && grid[r][c] > max_val[rem]){
                   for(int v = max_val[rem] + 1; v <= grid[r][c]; v++){
                       for(auto it : mp[v]){
@@ -128,7 +116,7 @@ public:
                            }
                       }
                   }
-                  max_val[rem] = grid[r][c]; // update cache
+                  max_val[rem] = grid[r][c];
               }
           }
     return 0;
