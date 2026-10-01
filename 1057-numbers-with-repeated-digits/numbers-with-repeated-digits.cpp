@@ -1,6 +1,7 @@
 class Solution {
 public:
 int dp[11][2][2][1032];
+//thoondu oru thadavathaan thavurum...
 int func(int idx,string &s,bool tight,bool start,int mask){
        if(idx==s.length()){
             return 1;
