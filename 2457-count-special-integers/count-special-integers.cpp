@@ -1,6 +1,7 @@
 class Solution {
 public:
 int dp[18][2][2][1032];
+//i don't need to impress someone
 int func(string s,int idx,bool tight,bool start,int mask){
     if(idx==s.length()) return 1;
     int up=0;
