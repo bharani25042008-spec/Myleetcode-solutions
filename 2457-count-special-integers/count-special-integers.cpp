@@ -1,7 +1,7 @@
 class Solution {
 public:
 int dp[18][2][2][1032];
-//i don't need to impress someone
+//i think the 3D print might took morning 4 '0 clock to complete today's sleep was gone for someone who didn't even ask me whether u are ok
 int func(string s,int idx,bool tight,bool start,int mask){
     if(idx==s.length()) return 1;
     int up=0;
