@@ -1,5 +1,6 @@
 class Solution {
 public:
+//let's wait for oct 15 whether we would qualify for the icpc regionals or not
 string func(int n){
        string s="";
        while(n>0){
