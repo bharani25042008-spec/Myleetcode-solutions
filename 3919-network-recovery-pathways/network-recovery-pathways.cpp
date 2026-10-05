@@ -1,5 +1,6 @@
 class Solution {
 public:
+//i just wanted to quit these stuffs and go for poultry farming
 bool func(int &x,int &n,vector<bool>&online,vector<vector<pair<int,int>>>&adj,long long &k){
           vector<long long>dist(n,LLONG_MAX);
           dist[0]=0;
