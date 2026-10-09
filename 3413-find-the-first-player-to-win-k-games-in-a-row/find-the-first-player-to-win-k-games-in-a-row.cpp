@@ -9,7 +9,6 @@ public:
         }
         int n=skills.size();
         map<int,int>id;
-       
         for(int i=0;i<n;i++){  
             id[skills[i]]=i;
         }
