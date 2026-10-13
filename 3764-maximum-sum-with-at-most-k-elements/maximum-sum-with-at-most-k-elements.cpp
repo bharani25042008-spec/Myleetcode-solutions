@@ -16,7 +16,6 @@ public:
               ans+=pq.top();
               pq.pop();
        }
-       
         return ans;
     }
 };
