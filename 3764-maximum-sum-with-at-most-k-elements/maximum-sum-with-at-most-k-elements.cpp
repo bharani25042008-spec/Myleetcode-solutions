@@ -4,8 +4,8 @@ public:
        long long ans=0;
        priority_queue<int>pq;
        for(int i=0;i<grid.size();i++){
-             sort(grid[i].begin(),grid[i].end());
-             reverse(grid[i].begin(),grid[i].end());
+             sort(grid[i].begin(),grid[i].end(),greater<int>());
+            //  reverse(grid[i].begin(),grid[i].end());
              int l=limits[i];
              for(int j=0;j<l;j++){
                     pq.push(grid[i][j]);
