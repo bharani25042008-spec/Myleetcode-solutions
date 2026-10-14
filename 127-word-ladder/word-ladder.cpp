@@ -3,6 +3,7 @@ public:
     int ladderLength(string beginWord, string endWord, vector<string>& wordList) {
         //tomorrow is CIA and i didn't studied anything else and i had more fever i can't even look at the screen 
         //though this qns was asked at google today and i am just glad to solve this in one go....
+        //umm can i go
           queue<pair<string,int>>q;
           q.push({beginWord,0});
           set<string>st;
