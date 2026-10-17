@@ -1,6 +1,7 @@
 class Solution {
 public:
 int func(vector<int>&v,vector<vector<int>>&intervals,map<vector<int>,int>&mp){
+    //why fear when bharani is here 
        int ans=INT_MAX;
        int l=0;
        int r=intervals.size()-1;
