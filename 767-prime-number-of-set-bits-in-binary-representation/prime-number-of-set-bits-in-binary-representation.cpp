@@ -1,5 +1,6 @@
 class Solution {
 public:
+//it's a digit dp problem 
 int dp[32][2][32];
 string  func(int n){
     if (n == 0) return "0";
