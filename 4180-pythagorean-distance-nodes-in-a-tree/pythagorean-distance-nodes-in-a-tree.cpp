@@ -1,6 +1,6 @@
 class Solution {
 public:
-void func(int start,vector<int>&dist,vector<vector<int>>&adj,int n){
+void func(int &start,vector<int>&dist,vector<vector<int>>&adj,int &n){
        queue<pair<int,int>>q;
        vector<int>vis(n+1,0);
        vis[start]=1;
