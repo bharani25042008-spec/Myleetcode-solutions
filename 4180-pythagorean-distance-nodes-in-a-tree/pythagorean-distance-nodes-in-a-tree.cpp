@@ -1,5 +1,6 @@
 class Solution {
 public:
+//aah  i need to build a prototype for the hackathons but the research took my entire holidays 😒😒😒
 void func(int &start,vector<int>&dist,vector<vector<int>>&adj,int &n){
        queue<pair<int,int>>q;
        vector<int>vis(n+1,0);
