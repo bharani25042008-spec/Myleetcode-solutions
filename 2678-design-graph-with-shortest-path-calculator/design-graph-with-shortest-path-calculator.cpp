@@ -1,5 +1,6 @@
 class Graph {
 public:
+//it's simple djikstra 
 vector<vector<pair<int,int>>>adj;
     Graph(int n, vector<vector<int>>& edges) {
         adj.resize(n);
