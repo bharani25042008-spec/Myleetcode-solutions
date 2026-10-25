@@ -1,10 +1,11 @@
 class Solution {
 public:
+//  Ok le me do it solo 
     vector<int> beautifulIndices(string s, string a, string b, int k) {
           vector<int>ans;
           vector<int>p1;
           vector<int>p2;
-          if (a.size() > s.size() || b.size() > s.size()) {
+          if (a.size()>s.size()||b.size()>s.size()) {
              return {};
           }
           for(int i=0;i<=s.length()-a.size();i++){
