@@ -1,5 +1,6 @@
 class Solution {
 public:
+//uhh i am feeling depressed after seeing the VIT's hackerrank submission i just got the truth after 2 months even the one who is with me also betrayed
 long long dp[17][2][2][100][100];
 int c1(int id,int n){
         if(id%2==1){
