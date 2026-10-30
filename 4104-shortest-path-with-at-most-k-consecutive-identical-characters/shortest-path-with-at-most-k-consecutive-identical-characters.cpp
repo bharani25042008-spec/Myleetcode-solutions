@@ -13,7 +13,7 @@ public:
                auto[d,node,rem]=q.top();
                q.pop();
                if(node==n-1){
-                    if(rem<=k)
+                    // if(rem<=k)
                         return d;
                }
                for(auto nei:adj[node]){
