@@ -2,11 +2,15 @@ class Solution {
 public:
 bool func(long long ans,vector<int>&m,vector<long long>&d){
           for(int i=0;i<m.size();i++){
-                if(ans+d[i]<m[i]) return false;
-                ans-=m[i];
-                if(ans<0){
-                      ans=0;
-                }
+               if(ans<0){
+                   ans=0;
+               }
+               if(ans+d[i]>=m[i]){
+                     ans-=m[i];
+               }
+               else{
+                   return false;
+               }
           }
           return true;
 }
