@@ -1,5 +1,6 @@
 class Solution {
 public:
+//nowadays i can't sleep i think 
 void func(int n,vector<vector<int>>&adj,vector<int>&dist){
            dist[n]=0;
            queue<pair<int,int>>q;
