@@ -1,5 +1,6 @@
 class Solution {
 public:
+//today only two sum for streak maintenance 😞
     vector<int> twoSum(vector<int>& nums, int target) {
          map<int,int>mp;
          for(int i=0;i<nums.size();i++){
