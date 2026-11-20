@@ -1,6 +1,7 @@
 class Solution {
 public:
 vector<int>parent,size;
+//it's DSU
 int find(int x){
        if(parent[x]==x){
            return x;
