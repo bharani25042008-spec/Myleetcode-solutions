@@ -1,31 +1,31 @@
 class Solution {
 public:
-// woah i think this was the first problem that i solved while learning digit dp
-bool f(int n){
-     return n==1;
-}
-int dp[11][2][11];
-int func(string s,int idx,bool tight,int c){
+int dp[17][2][10];
+int func(string &s,int idx,int tight,int c){
       if(idx==s.length()){
-         return c;
+            return c;
       }
       int up=0;
       if(tight){
-         up=s[idx]-'0';
+          up=s[idx]-'0';
       }else{
-        up=9;
+          up=9;
       }
-      if(dp[idx][tight][c]!=-1) return dp[idx][tight][c];
       int ans=0;
+      if(dp[idx][tight][c]!=-1) return dp[idx][tight][c];
       for(int i=0;i<=up;i++){
-         bool newtight=(tight)&&(i==up);
-         ans+=func(s,idx+1,newtight,c+f(i));
+          int newtight=(tight)&&(i==up);
+          if(i==1){
+              ans+=func(s,idx+1,newtight,c+1);
+          }else{
+              ans+=func(s,idx+1,newtight,c);
+          }
       }
       return dp[idx][tight][c]=ans;
 }
     int countDigitOne(int n) {
-        string s=to_string(n);
         memset(dp,-1,sizeof(dp));
+        string s=to_string(n);
         return func(s,0,1,0);
     }
 };
