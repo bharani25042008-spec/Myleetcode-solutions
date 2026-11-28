@@ -22,5 +22,6 @@ int func(vector<int>&nums,int k){
 }
     int subarraysWithKDistinct(vector<int>& nums, int k) {
         return func(nums,k)-func(nums,k-1);
+        //avlodhan da thambi sliding window
     }
 };
